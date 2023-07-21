@@ -6,7 +6,7 @@ import Head from "next/head";
 
 const Clock = () => {
   const [state, dispatch] = useClock();
-  const audioPlayer = useRef(null);
+  const audioPlayer = useRef<HTMLVideoElement | null>(null);
   const [soundPath, setSoundPath] = useState("./sound-toggle.mp3");
 
   const { minutes, seconds, isRunning, counter } = state;
