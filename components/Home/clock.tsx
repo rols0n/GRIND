@@ -17,17 +17,23 @@ const Clock = () => {
       intervalID = setInterval(() => {
         if (seconds < 1 && minutes < 1) {
           new Notification("The Timer is over");
-          dispatch({ type: "SET_COUNTER" });
+          dispatch({
+            type: "SET_COUNTER",
+            payload: undefined,
+          });
         }
 
-        dispatch({ type: "SET_TIMER" });
+        dispatch({
+          type: "SET_TIMER",
+          payload: undefined,
+        });
       }, 1000);
 
       return () => {
         clearInterval(intervalID);
       };
     }
-  }, [isRunning, minutes, seconds]);
+  }, [isRunning, minutes, seconds, dispatch]);
 
   const minutesText = minutes.toString().padStart(2, "0");
   const secondsText = seconds.toString().padStart(2, "0");
@@ -37,7 +43,10 @@ const Clock = () => {
   if (counter.current !== "focus") counterText = `#${counter.breaks - 1} Break`;
 
   const buttonHandler = () => {
-    dispatch({ type: "SET_IS_RUNNING" });
+    dispatch({
+      type: "SET_IS_RUNNING",
+      payload: undefined,
+    });
     if (audioPlayer.current !== null) {
       audioPlayer.current.volume = 0.6;
       audioPlayer.current.play();
