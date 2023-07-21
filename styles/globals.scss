@@ -1,0 +1,45 @@
+@use "./variables";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  font-family: "Rubik", sons-serife;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+body {
+  // background-image: url("/21199.jpg");
+  // background-size: cover;
+  // background-color: rgba(131, 14, 14, 0.01);
+  // rgb(21 29 43);
+
+  overflow: hidden;
+  height: 100%;
+}
+
+#__next {
+  height: 100%;
+}
+
+// #container {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   // z-index: 10;
+// }
+
+// #container--active {
+//   z-index: 10;
+//   background-color: purple;
+// }

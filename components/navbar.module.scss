@@ -1,0 +1,110 @@
+@use "../styles/variables";
+
+$side-padding: 32px;
+$inside-padding: 64px;
+$side-radius: 100px;
+
+.navbar {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  z-index: 5;
+  margin: 0 auto;
+
+  div {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+  }
+  .left-side-div {
+    padding-left: $side-padding;
+    margin-right: auto;
+    padding-right: $inside-padding;
+
+    border-bottom-right-radius: $side-radius;
+  }
+  .middle-side-div {
+    margin: 0 auto;
+    justify-content: center;
+    column-gap: 24px;
+    padding: 0 $inside-padding;
+
+    .link {
+      font-size: 20px;
+      font-weight: 400;
+      color: variables.$root-color-10tint;
+
+      transition: color 0.3s ease-out;
+      transition: transform 0.1s ease-out;
+
+      &:hover {
+        color: variables.$root-color-30shade;
+      }
+
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+  }
+
+  .right-side-div {
+    margin-left: auto;
+    padding-left: $inside-padding;
+    padding-right: $side-padding;
+    column-gap: 24px;
+
+    border-bottom-left-radius: $side-radius;
+  }
+}
+
+.name {
+  font-size: variables.$regular-font;
+  font-weight: 700;
+  color: variables.$root-color;
+}
+
+.avatar,
+.settingsIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatar {
+  width: 36px;
+  height: 36px;
+
+  img {
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+
+    border: 2px solid variables.$root-color;
+  }
+}
+
+.settingsIcon {
+  width: 30px;
+  height: 30px;
+
+  background-color: transparent;
+  border-radius: 100%;
+  padding: 2px;
+
+  img {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+  }
+}
+
+.link--active {
+  color: variables.$root-color-10shade !important;
+  font-weight: 500 !important;
+
+  &:hover {
+    color: variables.$root-color-40shade !important;
+  }
+}

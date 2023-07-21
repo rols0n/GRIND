@@ -1,0 +1,50 @@
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+
+  z-index: -1 !important;
+  width: 100%;
+
+  .shape {
+    // transform: rotate(30deg);
+    position: absolute;
+  }
+
+  .shape1 {
+    rotate: 232deg;
+
+    // top: 770px;
+    // left: -391px;
+    z-index: 3;
+    rotate: 100deg;
+    // right: 10px;
+    opacity: 0.2;
+    border-radius: 10px;
+    // height: 800px;
+  }
+
+  .shape2 {
+    rotate: 232deg;
+    width: 879px;
+    height: 425px;
+    background-color: #17aeff24;
+    top: 770px;
+    left: 91px;
+    z-index: 3;
+    border-radius: 10px;
+  }
+
+  .shape3 {
+    rotate: 212deg;
+    width: 700px;
+    height: 425px;
+    background-color: #ff6f7d;
+    bottom: 770px;
+    right: -401px;
+    z-index: 4;
+  }
+}

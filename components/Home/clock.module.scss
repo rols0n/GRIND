@@ -1,0 +1,70 @@
+@use "../../styles/variables";
+
+.clock {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+
+  align-self: center;
+
+  padding: 12vh;
+  margin-top: 15vh;
+
+  //   background-color: variables.$timer-bg-color;
+  border-radius: 50%;
+  height: 16vh;
+  width: 16vh;
+
+  box-shadow: 0 0 10px #00cdfd;
+  backdrop-filter: blur(120px);
+
+  .timer {
+    font-size: variables.$huge-font;
+    color: #ff727f;
+    font-weight: 700;
+  }
+
+  .counter {
+    font-size: variables.$small-font;
+    font-weight: 500;
+    color: rgb(91, 91, 91);
+  }
+
+  .button {
+    background-color: transparent;
+    border: none;
+
+    font-weight: 600;
+    font-size: variables.$regular-font;
+    color: #0053b5;
+
+    transition: transform 0.1s ease-out;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}
+
+.active {
+  animation: pulseShadow 1s ease-in-out infinite;
+}
+
+@keyframes pulseShadow {
+  0% {
+    box-shadow: 0 0 10px #00cdfd;
+  }
+  50% {
+    box-shadow: 0 0 33px #00cdfd;
+  }
+  100% {
+    box-shadow: 0 0 10px #7afac4;
+  }
+}
