@@ -17,7 +17,16 @@ const initialState = {
   isRunning: false,
 };
 
-const reducer = (state, action) => {
+const reducer = (
+  state: {
+    isRunning?: any;
+    counter?: any;
+    confData?: any;
+    minutes?: any;
+    seconds?: any;
+  },
+  action: { type: any; payload: any }
+) => {
   switch (action.type) {
     case "SET_CONF_DATA":
       return { ...state, confData: action.payload };
