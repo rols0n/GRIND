@@ -1,7 +1,10 @@
 import Link from "next/link";
 import classes from "./navbar.module.scss";
+import { MouseEventHandler } from "react";
 
-const navbar = (props) => {
+const navbar = (props: {
+  toggleSettings: MouseEventHandler<HTMLAnchorElement> | undefined;
+}) => {
   return (
     <nav className={classes.navbar}>
       <div className={classes["left-side-div"]}>
