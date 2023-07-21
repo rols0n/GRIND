@@ -38,8 +38,10 @@ const Clock = () => {
 
   const buttonHandler = () => {
     dispatch({ type: "SET_IS_RUNNING" });
-    audioPlayer.current.volume = 0.6;
-    audioPlayer.current.play();
+    if (audioPlayer.current !== null) {
+      audioPlayer.current.volume = 0.6;
+      audioPlayer.current.play();
+    }
   };
 
   return (
