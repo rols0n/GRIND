@@ -2,9 +2,9 @@ import { useReducer } from "react";
 
 const initialState = {
   confData: {
-    focus: 1,
-    shortBreak: 1,
-    longBreak: 1,
+    focus: 20,
+    shortBreak: 5,
+    longBreak: 15,
   },
   counter: {
     focuses: 1,
@@ -12,7 +12,7 @@ const initialState = {
     current: "focus",
     next: "short-break",
   },
-  minutes: 1,
+  minutes: 20,
   seconds: 0,
   isRunning: false,
 };
