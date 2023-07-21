@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { MouseEventHandler, useState } from "react";
 import { createPortal } from "react-dom";
 
 import Link from "next/link";
@@ -7,7 +7,9 @@ import Main from "../components/Home/main";
 import Pattern from "@/components/Home/pattern";
 import Settings from "@/components/Home/settings";
 
-function Home(props) {
+function Home(props: {
+  toggleSettings: MouseEventHandler<HTMLAnchorElement> | undefined;
+}) {
   return (
     <>
       <Navbar toggleSettings={props.toggleSettings}></Navbar>
