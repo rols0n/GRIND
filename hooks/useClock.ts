@@ -67,7 +67,7 @@ const reducer = (
       } = state;
       if (seconds > 0) return { ...state, seconds: seconds - 1 };
       if (minutes > 0) {
-        return { ...state, minutes: minutes - 1, seconds: 5 };
+        return { ...state, minutes: minutes - 1, seconds: 59 };
       }
 
       // Reseting/Changing timer values
